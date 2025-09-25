@@ -1,21 +1,17 @@
 import 'package:flutter/material.dart';
+import '../components/bottom_navbar.dart'; // Pastikan mengimpor navbar
 
-class ProfilePage extends StatefulWidget {
-  const ProfilePage ({super.key});
-
-  @override
-  State<StatefulWidget> createState() {
-    // TODO: implement createState
-    throw UnimplementedError();
-  }
+class ProfilePage extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
-    return SafeArea(
-        child: Center(
-          child: Text('Halaman Profil',
-          style: Theme.of(context).textTheme.titleLarge,
-          ),
-        ),
+    return Scaffold(
+      appBar: AppBar(
+        title: Text('Profile Page'),
+      ),
+      body: Center(
+        child: Text("Welcome to the Profile Page"),
+      ),
+      bottomNavigationBar: CustomNavBarRectangular(), // Memanggil navbar di sini
     );
   }
 }
